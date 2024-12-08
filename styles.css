@@ -1,0 +1,73 @@
+/* إعدادات عامة */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #a8dadc, #457b9d);
+  overflow: hidden;
+}
+
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#player {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background-color: #1d3557;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #e63946;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+#score-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px; /* حجم الخط أكبر لتبرز الرسالة */
+  font-weight: bold;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff, #06d6a0, #ffbe0b);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite, colorCycle 6s infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ff006e, 0 0 20px #8338ec, 0 0 30px
